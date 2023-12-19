@@ -29,6 +29,7 @@ public class OrderController {
     public void createOrder(@RequestBody CustomerOrder customerOrder)
     {
 		Order order = new Order();
+
         try{
             order.setAmount(customerOrder.getAmount());
             order.setItem(customerOrder.getItem());

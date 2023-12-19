@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.temmytechie.ecommerce.orderms.entity.Order;
 import com.temmytechie.ecommerce.orderms.entity.OrderRepository;
 import com.temmytechie.ecommerce.orderms.model.OrderEvent;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class ReverseOrder {
     @KafkaListener(topics = "reversed-orders", groupId = "orders-group")
     public void reverseOrder(String event) {
 
-        log.info("Inside reverse order for order {}", event);
+        log.info("reverse order for order {}", event);
 
         try {
             OrderEvent orderEvent = new ObjectMapper().readValue(event, OrderEvent.class);
