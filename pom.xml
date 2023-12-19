@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.temmytechie</groupId>
-	<artifactId>e-commerce</artifactId>
+	<artifactId>order-ms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>e-commerce</name>
+	<name>order-ms</name>
 	<description>e-commerce with orchestration saga design pattern</description>
 	<properties>
 		<java.version>17</java.version>
